@@ -1,21 +1,29 @@
-//Create a program to find the maximum number of handshakes among N number of students.
-//The formula to calculate the combination is : combination = (n * (n - 1)) / 2
-// where n = total number of students
-//Get integer input for students variable.
-//Use the combination formula to calculate the maximum number of possible handshakes.
-//Display the number of possible handshakes.
+//Create a program to divide N number of chocolates among M children.
+//Get an integer value for the number of chocolate.
+//Get an integer input for the number of children.
+//Find the number of chocolates each child gets after //Find the number of remaining chocolates and print it.
+//Assumption: Input value for the number of chocolates should be greater than the number of children.
 
 #include <stdio.h>
 
-int main() 
+int main()
 {
-    int n;
+    int chocolate;
+    scanf("%d\n", &chocolate);
     
-    scanf("%d", &n);
+    int children;
+    scanf("%d", &children);
     
-    int combination = (n * (n - 1)) / 2;
+    int received;
+    received = chocolate / children;
     
-    printf("%d", combination);
+    int remaining;
+    remaining = chocolate % children;
+    
+    printf("%d\n", received);
+    
+    printf("%d", remaining);
     
     return 0;
+    
 }
